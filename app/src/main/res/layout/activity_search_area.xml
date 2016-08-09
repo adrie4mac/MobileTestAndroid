@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/wrapperSearch"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_corner">
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_text_query"
+            android:paddingLeft="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:completionThreshold="1"
+            android:hint="Search area"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"/>
+
+        <View
+            android:layout_marginLeft="45dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/geyser"/>
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/image_view_search"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/search_ico" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_view_clear"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="9dp"
+            android:layout_alignBottom="@id/edit_text_query"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/edit_text_query"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:src="@drawable/close_search_ico"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnToDoctorList"
+        android:layout_below="@+id/wrapperSearch"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_background_white_grey"
+        android:layout_alignParentRight="true"
+        android:layout_width="120dp"
+        android:layout_height="35dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/arrow" />
+        
+        <TextView
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Find Doctor"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
